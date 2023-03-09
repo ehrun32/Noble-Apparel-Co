@@ -32,6 +32,7 @@ const PaymentForm = () => {
     }).then((res) => {
       return res.json();
     });
+    // hey
 
     const clientSecret = response.paymentIntent.client_secret;
 
