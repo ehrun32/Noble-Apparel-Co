@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const SignUpContainer = styled.div`
-  grid-area: span 13 / span 1 / auto / auto;
+  grid-area: span 14 / span 1 / auto / auto;
   display: flex;
   flex-direction: column;
   text-align: center;
