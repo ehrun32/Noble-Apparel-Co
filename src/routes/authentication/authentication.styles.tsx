@@ -12,6 +12,8 @@ export const AuthenticationContainer = styled.div`
 
   @media (max-width: 62.5em) {
     grid-template-columns: minmax(100%, 1fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
     grid-template-rows: repeat(23, 4vh);
   }
 `;
