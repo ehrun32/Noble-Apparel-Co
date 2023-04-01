@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import { SpinnerContainer } from '../spinner/spinner.styles';
+import { SpinnerContainer } from "../spinner/spinner.styles";
 
 export const BaseButton = styled.button`
   min-width: 165px;
@@ -9,11 +9,11 @@ export const BaseButton = styled.button`
   letter-spacing: 0.5px;
   line-height: 50px;
   padding: 0 35px 0 35px;
-  font-size: 15px;
+  font-size: 10px;
   background-color: black;
   color: white;
   text-transform: uppercase;
-  font-family: 'Open Sans Condensed';
+  font-family: "Open Sans Condensed";
   font-weight: bolder;
   border: none;
   cursor: pointer;

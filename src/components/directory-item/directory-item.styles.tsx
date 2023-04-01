@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 type BackgroundImageProps = {
   imageUrl: string;
@@ -13,48 +13,65 @@ export const BackgroundImage = styled.div<BackgroundImageProps>`
 `;
 
 export const Body = styled.div`
-  height: 90px;
-  padding: 0 25px;
+  --length: 7em;
+  box-sizing: border-box;
+  opacity: 0.7;
+  height: calc(var(--length) - 1.5em);
+  width: calc(var(--length) + 0.5em);
   display: flex;
   flex-direction: column;
+  -webkit-box-align: center;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   border: 1px solid black;
   background-color: white;
-  opacity: 0.7;
   position: absolute;
+  user-select: none;
+  outline: none;
+  color: rgb(74, 74, 74);
 
   h2 {
     font-weight: bold;
     margin: 0 6px 0;
-    font-size: 22px;
+    font-size: 18px;
     color: #4a4a4a;
     text-transform: uppercase;
   }
 
   p {
     font-weight: lighter;
-    font-size: 16px;
+    font-size: 14px;
+  }
+
+  @media (max-width: 48em) {
+    --length: 6em;
   }
 `;
 
 export const DirectoryItemContainer = styled.div`
+  height: 100%;
   min-width: 30%;
-  height: 240px;
-  flex: 1 1 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid black;
-  margin: 0 7.5px 15px;
+  width: 100%;
   overflow: hidden;
+  border: 1px solid black;
+  margin: 0px;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  perspective-origin: center center;
+  perspective: 700rem;
+  cursor: pointer;
 
-  &:first-child {
-    margin-right: 7.5px;
+  &:nth-child(-n + 3) {
+    grid-area: span 4 / span 4 / auto / auto;
   }
-
-  &:last-child {
-    margin-left: 7.5px;
+  &:nth-child(n + 4) {
+    grid-area: 5 / span 6 / -1 / auto;
+  }
+  &:nth-child(n + 4) {
+    grid-area: 5 / span 6 / -1 / auto;
   }
 
   &:hover {
@@ -67,6 +84,24 @@ export const DirectoryItemContainer = styled.div`
 
     ${Body} {
       opacity: 0.9;
+    }
+  }
+
+  @media (max-width: 48em) {
+    &:first-child {
+      grid-area: span 4 / span 6 / auto / auto;
+    }
+    &:nth-child(2) {
+      grid-area: span 3 / span 6 / auto / auto;
+    }
+    &:nth-child(3) {
+      grid-area: span 3 / span 6 / auto / auto;
+    }
+    &:nth-child(4) {
+      grid-area: 4 / 7 / span 4 / -1;
+    }
+    &:nth-child(n + 5) {
+      grid-area: 8 / 1 / -1 / -1;
     }
   }
 `;
