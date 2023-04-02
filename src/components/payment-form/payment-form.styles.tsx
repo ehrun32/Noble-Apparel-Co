@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Button from "../button/button.component";
 
 export const PaymentFormContainer = styled.div`
-  height: 300px;
+  /* height: 300px; */
   width: 55%;
   display: flex;
   flex-direction: column;
@@ -16,10 +16,10 @@ export const PaymentFormContainer = styled.div`
 
 export const FormContainer = styled.form`
   height: 100px;
-  min-width: 500px;
+  min-width: 100%;
 
   @media (max-width: 48em) {
-    width: 90%;
+    min-width: 90%;
   }
 `;
 
