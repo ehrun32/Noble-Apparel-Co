@@ -1,4 +1,3 @@
-
 # Noble-Apparel-Co 
 To view the project it is visible in the following website:
 https://nobleapparel.netlify.app/
